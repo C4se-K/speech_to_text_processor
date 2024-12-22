@@ -16,8 +16,6 @@ stream = p.open(format=FORMAT,
                 input=True,
                 frames_per_buffer=CHUNK)
 
-print("Recording. Press Ctrl+C to stop.")
-
 try:
     while True:
         data = stream.read(CHUNK, exception_on_overflow=False)
