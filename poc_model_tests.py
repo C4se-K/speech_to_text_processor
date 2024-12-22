@@ -8,7 +8,15 @@ model_size = "large-v3"
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
 """
-test output: 
+
+a test to grasp the processing time for the model.
+
+tested 200 attempts.
+beams 1-10 with ten attempts for each. -> average taken
+
+
+
+sample test output: 
 
 beam 1 Average Time taken for transcription: 0.97 seconds. time per second: 0.03 with range of: 0.0681        
 beam 2 Average Time taken for transcription: 1.04 seconds. time per second: 0.03 with range of: 0.0307        

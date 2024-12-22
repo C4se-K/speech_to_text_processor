@@ -24,7 +24,7 @@ model = WhisperModel(MODEL_SIZE, device = "cuda", compute_type = "float16")
 
 
 audio = pyaudio.PyAudio()
-stream = audio.open() # thing here
+stream = audio.open() # todo
 
 
 print("all systems nominal")
