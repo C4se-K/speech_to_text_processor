@@ -8,7 +8,7 @@ model_size = "large-v3"
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
 """
-output: 
+test output: 
 
 beam 1 Average Time taken for transcription: 0.97 seconds. time per second: 0.03 with range of: 0.0681        
 beam 2 Average Time taken for transcription: 1.04 seconds. time per second: 0.03 with range of: 0.0307        
@@ -34,10 +34,10 @@ beam 20 Average Time taken for transcription: 3.98 seconds. time per second: 0.1
 
 """
 
-# Run on GPU with FP16
+# run on GPU with FP16
 model = WhisperModel(model_size, device="cuda", compute_type="float16")
 
-# Measure the time to transcribe
+# measure the time to transcribe
 def transcribe(i):
     start_time = time.time()  # Start timing
 
@@ -51,7 +51,7 @@ def transcribe(i):
 
     end_time = time.time()  # End timing
 
-    # Calculate and print time taken
+    # calculate and print time taken
     time_taken = end_time - start_time
     #print(f"beam {i} Time taken for transcription: {time_taken:.2f} seconds. time per second: {(time_taken / 34 ):.2f}")
     return time_taken
@@ -66,7 +66,7 @@ segments, _ = model.transcribe(PATH, beam_size= 1)
 
 #it seems there is a limit to the overhead of beam?
 
-
+#200 tests in total
 for i in range(1, 21):
     total = 0
     high =0
