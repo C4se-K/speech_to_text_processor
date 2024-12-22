@@ -9,8 +9,6 @@ a test to ensure the functionality of a rolling buffer with microphone input.
 """
 
 
-
-# Constants
 CHUNK = 1024  #samples per frame
 FORMAT = pyaudio.paInt16  # 16-bit resolution
 CHANNELS = 1  # mono
